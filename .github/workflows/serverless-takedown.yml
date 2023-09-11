@@ -1,0 +1,10 @@
+name: Remove Serverless Resources from AWS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is a manual workflow"
