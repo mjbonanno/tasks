@@ -17,4 +17,5 @@ app.add_middleware(
 def health_check():
     return {"message": "OK"}
 
+
 handle = Magnum(app)
