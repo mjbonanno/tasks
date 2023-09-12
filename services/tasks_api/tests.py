@@ -30,7 +30,7 @@ def test_health_check(client):
 @pytest.fixture
 def dynamodb_table():
     with mock_dynamodb():
-        client = boto3.client("dynamodb")
+        client = boto3.client("dynamodb", region_name="us-east-1")
         table_name = "test-table"
         client.create_table(
             AttributeDefinitions=[
