@@ -6,10 +6,10 @@ from fastapi import Depends, FastAPI, Header
 from fastapi.middleware.cors import CORSMiddleware
 from mangum import Mangum
 from starlette import status
-from schemas import APITask, CreateTask, APITaskList, CloseTask
+
 from config import Config
 from models import Task
-from schemas import APITask, CreateTask
+from schemas import APITask, APITaskList, CloseTask, CreateTask
 from store import TaskStore
 
 app = FastAPI()
