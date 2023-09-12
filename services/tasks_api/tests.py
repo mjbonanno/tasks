@@ -5,10 +5,9 @@ import pytest
 from fastapi import status
 from moto import mock_dynamodb
 from starlette.testclient import TestClient
-from models import Task, TaskStatus
 
 from main import app
-from models import Task
+from models import Task, TaskStatus
 from store import TaskStore
 
 
