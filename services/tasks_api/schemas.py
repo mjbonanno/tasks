@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from pydantic import BaseModel
+from pydantic_settings import BaseModel
 
 from models import TaskStatus
 
