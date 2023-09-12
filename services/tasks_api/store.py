@@ -42,7 +42,7 @@ class TaskStore:
             owner=record["Item"]["owner"],
             status=TaskStatus[record["Item"]["status"]],
         )
-    
+
     def add(self, task):
         dynamodb = boto3.resource("dynamodb")
         table = dynamodb.Table(self.table_name)
@@ -58,7 +58,6 @@ class TaskStore:
                 "owner": task.owner,
             }
         )
-
 
     def list_open(self, owner):
         return self._list_by_status(owner, TaskStatus.OPEN)
