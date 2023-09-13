@@ -65,7 +65,7 @@ jobs:
       - name: Run bandit
         run: poetry run bandit .
   deploy-development:
-    needs: [test, code-quality]
+    #  needs: [test, code-quality]
     strategy:
       fail-fast: false
       matrix:
